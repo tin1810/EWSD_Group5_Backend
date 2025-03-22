@@ -16,7 +16,7 @@ const connection = mysql.createConnection({
   host: parsedUrl.hostname,
   user: parsedUrl.username,
   password: parsedUrl.password,
-  database: parsedUrl.pathname.split('/')[1], // This gets the database name from the URL
+  database: parsedUrl.pathname.split('/')[1],
   port: parsedUrl.port
 });
 
