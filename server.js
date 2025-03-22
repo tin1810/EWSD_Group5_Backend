@@ -8,6 +8,30 @@ const fs = require('fs');
 const archiver = require('archiver');
 require('dotenv').config();
 
+
+const dbUrl = process.env.DB_URL;
+const parsedUrl = new URL(dbUrl);
+
+const connection = mysql.createConnection({
+  host: parsedUrl.hostname,
+  user: parsedUrl.username,
+  password: parsedUrl.password,
+  database: parsedUrl.pathname.split('/')[1], // This gets the database name from the URL
+  port: parsedUrl.port
+});
+
+connection.connect((err) => {
+  if (err) {
+    console.error("Database connection error:", err);
+    return;
+  }
+  console.log("✅ Connected to MySQL database!");
+});
+
+module.exports = connection;
+
+// end
+
 const app = express();
 app.use(express.json());
 
