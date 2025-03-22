@@ -1,5 +1,6 @@
-University Magazine API
+
 📌 Project Overview
+
 This is the backend API for the University Magazine System, designed to manage articles, user authentication, and content moderation.
 
 🚀 Features
