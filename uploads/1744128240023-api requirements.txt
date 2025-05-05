@@ -1,0 +1,72 @@
+﻿1. System Architecture & Portals
+The system will be divided into five main portals based on the roles and their permissions:
+1. Student Portal – For submitting contributions (articles, images).
+2. Faculty Marketing Coordinator Portal – For reviewing and selecting contributions.
+3. University Marketing Manager Portal – For overseeing the entire magazine selection process.
+4. Admin Portal – For managing system configurations (closure dates, accounts, etc.).
+5. Guest Portal – For public users to view selected articles.
+Each portal will have role-based access control (RBAC) to ensure security and restricted access to relevant data.
+________________
+
+
+2. Development Flow
+System Setup & Database Design
+* Define user roles: Student, Faculty Marketing Coordinator, University Marketing Manager, Admin, Guest.
+* Design the ERD (Entity Relationship Diagram) with necessary tables:
+   * Users (with roles)
+   * Contributions (articles, images)
+   * Comments & Reviews
+   * Selected Contributions
+   * System Configuration (closure dates)
+________________
+
+
+Student Portal Development
+✅ Features:
+* User registration & login.
+* Submit articles (Word documents) & high-quality images.
+* View past submissions and track approval status.
+* Restrict new submissions after the closure date, but allow updates until the final closure date.
+* Email notification to the Faculty Marketing Coordinator upon submission.
+________________
+
+
+Faculty Marketing Coordinator Portal
+✅ Features:
+* View all submitted contributions from students within their faculty.
+* Add comments to submissions (mandatory within 14 days).
+* Edit contributions (in collaboration with students).
+* Select articles for publication.
+* Generate reports for:
+   * Number of contributions within the faculty.
+   * Exception report for contributions without comments (after 14 days).
+________________
+
+
+University Marketing Manager Portal
+✅ Features:
+* View all selected contributions from all faculties.
+* Cannot edit any contributions.
+* Download all selected articles as a ZIP file after the final closure date.
+* Generate statistical reports:
+   * Total contributions per faculty.
+   * Percentage of contributions by faculty.
+   * Total student contributors per faculty.
+________________
+
+
+Admin Portal Development
+✅ Features:
+* Set system closure dates (submission deadline, final deadline).
+* Manage user accounts (create/edit/delete Faculty Coordinators, Marketing Manager).
+________________
+
+
+Additional coursework requirements – release week 6 1. 
+To improve security the system needs to remind every user of the date and time they last logged in (or welcome them if this is their first login) 
+2. To monitor the use of the system the administrator needs to be able to view a number of reports showing which pages are most viewed, which users are most active, which browsers are being used, etc. 
+
+
+3. When a guest account is registered for each faculty, the system emails a notification to the Faculty’s Marketing Coordinator. 
+4. Faculty’s Marketing Coordinators can view the list of guests in their faculty. ========================================================================
+________________
